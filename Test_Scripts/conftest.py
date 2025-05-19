@@ -81,7 +81,7 @@ def pytest_runtest_makereport(item, call):
             is_frontend_test = True if 'init_driver' in item.fixturenames else False
 
             if is_frontend_test:
-                results_dir = os.environ.get("RESULTS_DIR", r"C:\Users\nicol\PycharmProjects\Esitetest\Esitetest\reports")
+                results_dir = os.environ.get("RESULTS_DIR", r"C:\Users\nicol\PycharmProjects\DemoQA_AutomatedTesting\Test_Scripts\reports")
                 if not results_dir:
                     raise Exception("Environment variable 'RESULTS_DIR' must be set.")
 
