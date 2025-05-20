@@ -1,9 +1,12 @@
 
-from selenium.common.exceptions import TimeoutException, StaleElementReferenceException, ElementClickInterceptedException
-from selenium.webdriver.support.ui import WebDriverWait, Select
-from selenium.webdriver.support import expected_conditions as EC
-from tenacity import (retry, stop_after_attempt,wait_fixed, retry_if_exception_type)
 import logging
+
+from selenium.common.exceptions import TimeoutException, StaleElementReferenceException, \
+    ElementClickInterceptedException
+from selenium.webdriver.support import expected_conditions as EC
+from selenium.webdriver.support.ui import WebDriverWait, Select
+from tenacity import (retry, stop_after_attempt, wait_fixed, retry_if_exception_type)
+
 logging.basicConfig(level=logging.INFO)
 
 def selenium_retry(func):
@@ -54,6 +57,15 @@ class SeleniumExtended:
         WebDriverWait(self.driver, timeout).until(
             EC.element_to_be_clickable(locator)
         ).click()
+
+    def scroll_to_and_click(self, locator, timeout=None):
+        timeout = timeout or self.default_timeout
+
+        element = WebDriverWait(self.driver, timeout).until(
+            EC.element_to_be_clickable(locator)
+        )
+        self.driver.execute_script("arguments[0].scrollIntoView({block: 'center'});", element)
+        element.click()
 
     @selenium_retry
     def wait_and_get_elements(self, locator, timeout=None, err=None ):
@@ -141,5 +153,18 @@ class SeleniumExtended:
             EC.element_to_be_clickable(locator)
         )
 
+    @selenium_retry
+    def cant_select_radio_button(self, input_locator, label_locator, timeout=None):
+        timeout = timeout or self.default_timeout
 
+        label = WebDriverWait(self.driver, timeout).until(
+            EC.element_to_be_clickable(label_locator)
+        )
+        label.click()
+
+        radio_input = self.driver.find_element(*input_locator)
+        is_selected = radio_input.is_selected()
+
+        if is_selected:
+            raise AssertionError(f"Radio button {input_locator} was selected but should NOT be.")
 

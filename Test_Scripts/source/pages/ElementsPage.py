@@ -1,12 +1,10 @@
 import logger
-
 from Test_Scripts.source.selenium_extended import SeleniumExtended
 from Test_Scripts.source.locators.Elements_locators import ElementsPageLocators
 from Test_Scripts.source.helpers.config_helpers import get_base_url
 
 class ElementsPage(ElementsPageLocators):
 
-    endpoint = '/elements/'
     def __init__(self, driver):
         self.driver = driver
         self.sl = SeleniumExtended(self.driver)
