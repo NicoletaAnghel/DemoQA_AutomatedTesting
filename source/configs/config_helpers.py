@@ -1,5 +1,4 @@
 import os
-from dotenv import load_dotenv
 
 def get_base_url():
 
