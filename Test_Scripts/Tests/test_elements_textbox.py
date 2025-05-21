@@ -1,3 +1,5 @@
+import time
+
 import pytest
 from Test_Scripts.conftest import init_driver
 from Test_Scripts.source.helpers.generate_random_address_details import RandomInputs
@@ -72,9 +74,6 @@ class TestElementsTextNegative:
     def test_complete_form_no_email(self):
         elements_page = ElementsPage(self.driver)
         elements_page.go_to_textbox()
-
-        email = generate_random_email_and_password()
-        elements_page.insert_email(email['email'])
 
         random_inputs = RandomInputs()
         random_form_input = RandomInputs()

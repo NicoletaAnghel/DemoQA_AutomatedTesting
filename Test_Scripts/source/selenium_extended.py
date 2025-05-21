@@ -1,13 +1,11 @@
-
 import logging
-
 from selenium.common.exceptions import TimeoutException, StaleElementReferenceException, \
     ElementClickInterceptedException
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.ui import WebDriverWait, Select
 from tenacity import (retry, stop_after_attempt, wait_fixed, retry_if_exception_type)
-
 logging.basicConfig(level=logging.INFO)
+
 
 def selenium_retry(func):
     return retry(

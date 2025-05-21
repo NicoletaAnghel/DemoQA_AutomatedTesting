@@ -3,6 +3,7 @@ from Test_Scripts.conftest import init_driver
 from Test_Scripts.source.pages.ElementsPage import ElementsPage
 
 
+
 @pytest.mark.usefixtures('init_driver')
 @pytest.mark.elementswebtablespositive
 class TestElementsWebTablesPositive:

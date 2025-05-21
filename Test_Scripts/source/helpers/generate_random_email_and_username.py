@@ -2,7 +2,6 @@ import random
 import string
 from venv import logger
 
-
 def random_username():
     length = random.randint(5,10)
     username = ''.join(random.choices(string.ascii_lowercase + string.digits, k=length))

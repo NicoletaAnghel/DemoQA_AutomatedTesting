@@ -1,3 +1,4 @@
+import time
 import pytest
 from Test_Scripts.conftest import init_driver
 from Test_Scripts.source.pages.ElementsPage import ElementsPage
@@ -29,6 +30,7 @@ class TestElementsCheckPositive:
             elements_page.click_extender_by_index(2)
             elements_page.click_extender_by_index(3)
             elements_page.click_extender_by_index(4)
+            time.sleep(2)
 
         @pytest.mark.checkbox4
         def test_check_box_select_all_options(self):
@@ -40,6 +42,7 @@ class TestElementsCheckPositive:
                                    'public', 'private', 'classified', 'general',
                                    'downloads', 'wordFile', 'excelFile']
             elements_page.check_message_after_checking_boxes(selected_checkboxes)
+            time.sleep(2)
 
         @pytest.mark.checkbox5
         def test_check_box_select_desktop(self):

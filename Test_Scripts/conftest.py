@@ -1,4 +1,3 @@
-
 import pytest
 from selenium import webdriver
 from selenium.webdriver import FirefoxProfile
@@ -8,7 +7,6 @@ from selenium.webdriver.firefox.service import Service as FFService
 from selenium.webdriver.firefox.options import Options as FFOptions
 import os
 import allure
-
 
 
 @pytest.fixture(scope='class')
