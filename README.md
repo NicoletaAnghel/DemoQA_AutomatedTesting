@@ -28,7 +28,7 @@ DemoQA_AutomatedTesting/
 🚀 Getting Started
 
 # 1. Clone the repository
-git clone [https://github.com/yourusername/DemoQA-Tests.git](https://github.com/NicoletaAnghel/DemoQA_AutomatedTesting)
+git clone https://github.com/NicoletaAnghel/DemoQA_AutomatedTesting
 cd DemoQA_AutomatedTesting
 
 # 2. Create and activate a virtual environment
@@ -112,8 +112,8 @@ set BROWSER=firefox              # On Windows
 
 Nicoleta Anghel  
 QA Software Tester  
-🔗 [https://github.com/NicoletaAnghel ](https://github.com/NicoletaAnghel)
-🔗 [https://linkedin.com/in/yourlinkedin](https://www.linkedin.com/in/nicoleta-anghel-73227a17a/)
+🔗 https://github.com/NicoletaAnghel
+🔗 https://www.linkedin.com/in/nicoleta-anghel-73227a17a/
 
 ────────────────────────────────────────────────────────────
 
