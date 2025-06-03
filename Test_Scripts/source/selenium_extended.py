@@ -32,6 +32,13 @@ class SeleniumExtended:
             EC.visibility_of_element_located(locator)
         ).send_keys(text)
 
+    def wait_and_clear_field(self, locator, timeout=None):
+        timeout = timeout or self.default_timeout
+
+        WebDriverWait(self.driver, timeout).until(
+            EC.visibility_of_element_located(locator)
+        ).clear()
+
     @selenium_retry
     def wait_and_click(self, locator, timeout=None):
         timeout = timeout or self.default_timeout

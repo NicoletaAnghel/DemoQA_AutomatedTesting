@@ -24,3 +24,18 @@ class ElementsPageLocators:
     RadioLabelImpressive = (By.CSS_SELECTOR, "label[for='impressiveRadio']")
     RadioLabelNo = (By.CSS_SELECTOR, "label[for='noRadio']")
     RadioBoxResultMessage = (By.CSS_SELECTOR, '.mt-3')
+
+    AddBtnWeb = (By.CSS_SELECTOR, '#addNewRecordButton')
+    FNameFieldWeb = (By.CSS_SELECTOR,'#firstName')
+    LNameFieldWeb = (By.CSS_SELECTOR,'#lastName')
+    EmailFieldWeb = (By.CSS_SELECTOR,'#userEmail')
+    AgeFieldWeb = (By.CSS_SELECTOR,'#age')
+    SalaryFieldWeb = (By.CSS_SELECTOR,'#salary')
+    DepartmentFieldWeb = (By.CSS_SELECTOR,'#department')
+    SubmitBtnWeb = (By.CSS_SELECTOR, '#submit')
+    EditBtnFirstUser = (By.CSS_SELECTOR, '#edit-record-1')
+    SalaryAmountInTableFirstUser = (By.CSS_SELECTOR, 'div.rt-tbody > div.rt-tr-group:nth-child(1) > div.rt-tr > div.rt-td:nth-child(5)')
+    DeleteSecondUser = (By.CSS_SELECTOR, '#delete-record-2')
+
+
+

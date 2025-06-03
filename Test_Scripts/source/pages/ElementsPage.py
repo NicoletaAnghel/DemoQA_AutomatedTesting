@@ -108,5 +108,52 @@ class ElementsPage(ElementsPageLocators):
         logger.info(f'Going to:  {elements_page_url}')
         self.driver.get(elements_page_url)
 
+    def click_add_employee(self):
+        self.sl.wait_and_click(self.AddBtnWeb)
+
+    def add_fname(self, fname):
+        self.sl.wait_and_input_text(self.FNameFieldWeb, fname)
+
+    def add_lname(self, lname):
+        self.sl.wait_and_input_text(self.LNameFieldWeb, lname)
+
+    def add_email(self, email):
+        self.sl.wait_and_input_text(self.EmailFieldWeb, email)
+
+    def add_age(self, age):
+        self.sl.wait_and_input_text(self.AgeFieldWeb, age)
+
+    def add_salary(self, salary):
+        self.sl.wait_and_input_text(self.SalaryFieldWeb, salary)
+
+    def add_department(self, department):
+        self.sl.wait_and_input_text(self.DepartmentFieldWeb, department)
+
+    def click_submit_btn(self):
+        self.sl.wait_and_click(self.SubmitBtnWeb)
+
+    def click_edit_btn_first_user(self):
+        self.sl.wait_and_click(self.EditBtnFirstUser)
+
+    def delete_salary(self):
+        self.sl.wait_and_clear_field(self.SalaryFieldWeb)
+
+    def change_salary(self, salary):
+        self.sl.wait_and_input_text(self.SalaryFieldWeb, salary)
+
+    def check_salary_change(self, salary):
+        self.sl.wait_until_element_contains_text(self.SalaryAmountInTableFirstUser, str(salary))
+
+    def delete_second_user(self):
+        self.sl.wait_and_click(self.DeleteSecondUser)
+
+
+
+
+
+
+
+
+
 
 

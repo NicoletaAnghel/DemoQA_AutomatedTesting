@@ -10,7 +10,7 @@ def random_username():
 def generate_random_email_and_password(domain =None, email_prefix=None):
 
     if not domain:
-        domain = 'esite.com'
+        domain = 'demoQA.com'
     if not email_prefix:
         email_prefix ='testuser'
 

@@ -35,5 +35,18 @@ class RandomInputs:
         random_shop = self.fake.company()
         return random_shop
 
+    def random_age(self):
+        random_age = self.fake.random_number(2)
+        return random_age
+
+    def random_salary(self):
+        random_salary = self.fake.random_number(4)
+        return  random_salary
+
+    def random_depart_name(self):
+        random_depart = self.fake.job()
+        return random_depart
+
+
 
 
